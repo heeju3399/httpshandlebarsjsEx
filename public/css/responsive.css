@@ -132,16 +132,15 @@ p {
 
 /* flex box  */
 
-
 .flex_container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: baseline;
+    align-items: flex-end;
     align-content: space-around;
     background-color: beige;
-    height: 600px;
+    height: 300px;
     font-size: 2rem;
     text-align: center;
 }
@@ -154,8 +153,7 @@ p {
 
 .itemFlex1 {
     background-color: #ef9a9a;
-    flex: 2 2 auto;
-    align-self: stretch;
+    align-self: center;
 }
 
 .itemFlex2 {
