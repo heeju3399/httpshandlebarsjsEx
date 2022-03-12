@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{!--
+    <link rel="stylesheet" href="../stst.css"> --}}
+    <link rel="stylesheet" href="css/{{style}}">
+    <title>반응형디자인</title>
+</head>
+
+
+<body>
+    <h2>가로 길이 700까지는 모바일 700~1100은 테블릿 1400 이상은 PC 입니다.</h2>
+    <script>
+        const innerWidth2 = window.innerWidth;
+        document.write("<h2>가로 사이즈  : " + innerWidth2 + "</h2>");
+    </script>
+
+    <h2 id="sizeText">현 사이즈</h2>
+    <div class="container">
+        <section class="item item-a">
+            <h1>Section A</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et dolorem est nemo earum, accusantium sed
+                blanditiis, numquam aspernatur doloribus, dolorum pariatur perferendis dolore voluptatum sunt assumenda!
+                Facere error consequuntur quasi?</p>
+        </section>
+        <section class="item item-b">
+            <h1>Section B</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et dolorem est nemo earum, accusantium sed
+                blanditiis, numquam aspernatur doloribus, dolorum pariatur perferendis dolore voluptatum sunt assumenda!
+                Facere error consequuntur quasi?</p>
+        </section>
+        <section class="item item-c">
+            <h1>Section C</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et dolorem est nemo earum, accusantium sed
+                blanditiis, numquam aspernatur doloribus, dolorum pariatur perferendis dolore voluptatum sunt assumenda!
+                Facere error consequuntur quasi?</p>
+        </section>
+        <section class="item item-d">
+            <h1>Section D</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et dolorem est nemo earum, accusantium sed
+                blanditiis, numquam aspernatur doloribus, dolorum pariatur perferendis dolore voluptatum sunt assumenda!
+                Facere error consequuntur quasi?</p>
+        </section>
+
+    </div>
+
+    <script>
+        var sizeText = document.getElementById("sizeText");
+        window.onresize = function (event) {
+            //alert('event');
+            var innerWidth = window.innerWidth;
+            var widthText = "";
+            if (innerWidth < 700) {
+                widthText = "현 사이즈 : --" + innerWidth + "-- (모바일)";
+            } else if (innerWidth >= 700 && innerWidth < 1100) {
+                widthText = "현 사이즈 : --" + innerWidth + "-- (테블릿)";
+            } else {
+                widthText = "현 사이즈 : --" + innerWidth + "-- (pc)";
+            }
+            sizeText.textContent = widthText;
+        }
+
+    </script>
+    <br>
+    <hr>
+    <br>
+    <h1 style="text-align: center;">grid</h1>
+    <br>
+    <div class="container22">
+        <div class="item2 color-1"> item-1 </div>
+        <div class="item2 color-2"> item-2 </div>
+        <div class="item2 color-3"> item-3 </div>
+        <div class="item2 color-4"> item-4 </div>
+        <div class="item2 color-5"> item-5 </div>
+    </div>
+    <footer>footer-flex</footer>
+</body>
+
+
+</html>
