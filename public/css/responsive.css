@@ -25,6 +25,8 @@ p {
         background-color: yellow;
         padding: 10px;
     }
+
+
 }
 
 @media screen and (min-width: 700px) and (max-width: 1100px) {
@@ -126,4 +128,76 @@ p {
     .color-5 {
         grid-column: 2;
     }
+}
+
+/* flex box  */
+
+
+.flex_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+    align-content: space-around;
+    background-color: beige;
+    height: 600px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.itemf3 {
+    width: 80px;
+    height: 80px;
+    border: 1px solid black;
+}
+
+.itemFlex1 {
+    background-color: #ef9a9a;
+    flex: 2 2 auto;
+    align-self: stretch;
+}
+
+.itemFlex2 {
+    background-color: red;
+}
+
+.itemFlex3 {
+    background-color: yellow;
+}
+
+.itemFlex4 {
+    background-color: teal;
+}
+
+.itemFlex5 {
+    background-color: tan;
+}
+
+.itemFlex6 {
+    background-color: thistle;
+}
+
+.itemFlex7 {
+    background-color: palegoldenrod;
+}
+
+.itemFlex8 {
+    background-color: peru;
+}
+
+.itemFlex9 {
+    background-color: purple;
+}
+
+.itemFlex10 {
+    background-color: olivedrab;
+}
+
+.itemFlex11 {
+    background-color: violet;
+}
+
+.itemFlex12 {
+    background-color: silver;
 }
