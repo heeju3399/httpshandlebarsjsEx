@@ -48,23 +48,7 @@
 
     </div>
 
-    <script>
-        var sizeText = document.getElementById("sizeText");
-        window.onresize = function (event) {
-            //alert('event');
-            var innerWidth = window.innerWidth;
-            var widthText = "";
-            if (innerWidth < 700) {
-                widthText = "현 사이즈 : --" + innerWidth + "-- (모바일)";
-            } else if (innerWidth >= 700 && innerWidth < 1100) {
-                widthText = "현 사이즈 : --" + innerWidth + "-- (테블릿)";
-            } else {
-                widthText = "현 사이즈 : --" + innerWidth + "-- (pc)";
-            }
-            sizeText.textContent = widthText;
-        }
 
-    </script>
     <br>
     <hr>
     <h1 style="text-align: center;">grid</h1>
@@ -80,7 +64,7 @@
 
     <br>
     <hr>
-    <h1 style="text-align: center;">flex_box</h1>
+    <h1 style="text-align: center;">1차원 정렬 flex_box</h1>
     <hr>
     <br>
 
@@ -99,9 +83,112 @@
         <div class="itemf3 itemFlex12">12</div>
     </div>
 
-    <div style="margin: 100px;">padding</div>
+    <br>
+    <hr>
+    <h1 style="text-align: center;">2차원 정렬 flex_box</h1>
+    <hr><br>
+    <h2 id="sizeText2"> 현 사이즈 </h2>
+    <div class="doulbe_flex_container_mobile">
+        <div class="doulbe_flex_container_mobile_column">
+            <div class="doulbe_flex_container_mobile_row">row1</div>
+            <div class="doulbe_flex_container_mobile_row">row2</div>
+            <div class="doulbe_flex_container_mobile_row">row3</div>
+            <div class="doulbe_flex_container_mobile_row">row4</div>
+            <div class="doulbe_flex_container_mobile_row">row5</div>
+        </div>
+    </div>
+
+    <div class="doulbe_flex_container_tablet">
+        <div class="doulbe_flex_container_tablet_column1">
+            <div class="doulbe_flex_container_tablet_row1">row1</div>
+            <div class="doulbe_flex_container_tablet_row1">row2</div>
+
+        </div>
+        <div class="doulbe_flex_container_tablet_column2">
+            <div class="doulbe_flex_container_tablet_row2">row1</div>
+            <div class="doulbe_flex_container_tablet_row2">row2</div>
+
+        </div>
+    </div>
+
+    <div class="doulbe_flex_container_desktop">
+        <div class="doulbe_flex_container_desktop_column1">
+            <div class="doulbe_flex_container_desktop_row1">row1</div>
+            <div class="doulbe_flex_container_desktop_row1">row1</div>
+        </div>
+        <div class="doulbe_flex_container_desktop_column2">
+            <div class="doulbe_flex_container_desktop_row2">row2</div>
+            <div class="doulbe_flex_container_desktop_row2">row2</div>
+        </div>
+        <div class="doulbe_flex_container_desktop_column3">
+            <div class="doulbe_flex_container_desktop_row3">row3</div>
+            <div class="doulbe_flex_container_desktop_row3">row3</div>
+        </div>
+        <div class="doulbe_flex_container_desktop_column4">
+            <div class="doulbe_flex_container_desktop_row4">row4</div>
+            <div class="doulbe_flex_container_desktop_row4">row4</div>
+        </div>
+    </div>
+
+
+    <br>
+    <hr>
+    <h1 style="text-align: center;">flex_box로 UI 꾸미기</h1>
+    <hr><br>
+    <h2 id="sizeText3"> 현 사이즈 </h2>
+
+    <div class="doulbe_flex_container_mobile2">
+        <div class="doulbe_flex_container_mobile2_column1">
+            <div class="doulbe_flex_container_mobile2_top_row">
+                <div class="doulbe_flex_container_mobile2_top_row_button">
+                    드랍다운 박스
+                </div>
+                <div class="doulbe_flex_container_mobile2_top_row_title">
+                    타이틀
+                </div>
+            </div>
+            <div class="doulbe_flex_container_mobile2_middle_row">
+                <div class="doulbe_flex_container_mobile2_middle_row_content1">content1</div>
+                <div class="doulbe_flex_container_mobile2_middle_row_content2">content2</div>
+                <div class="doulbe_flex_container_mobile2_middle_row_content3">content3</div>
+                <div class="doulbe_flex_container_mobile2_middle_row_content4">content4</div>
+                <div class="doulbe_flex_container_mobile2_middle_row_content5">content5</div>
+            </div>
+        </div>
+    </div>
+
+    {{!-- <div class="doulbe_flex_container_desktop_desktop2">
+        <div class="doulbe_flex_container_desktop_desktop2_column2">
+            <div class="doulbe_flex_container_desktop_desktop2_row3">row3</div>
+            <div class="doulbe_flex_container_desktop_desktop2_row4">row4</div>
+        </div>
+    </div> --}}
+
+    <div style="margin: 100px">marrgin</div>
+
+
+
 
     <footer>footer</footer>
+    <script>
+        var sizeText = document.getElementById("sizeText");
+        var sizeText2 = document.getElementById("sizeText2");
+        window.onresize = function (event) {
+            //alert('event');
+            var innerWidth = window.innerWidth;
+            var widthText = "";
+            if (innerWidth < 700) {
+                widthText = "현 사이즈 : --" + innerWidth + "--  (모바일)  ";
+            } else if (innerWidth >= 700 && innerWidth < 1100) {
+                widthText = "현 사이즈 : --" + innerWidth + "--   (테블릿)";
+            } else {
+                widthText = "현 사이즈 : --" + innerWidth + "--   (pc) ";
+            }
+            sizeText.textContent = widthText;
+            sizeText2.textContent = widthText;
+        }
+
+    </script>
 </body>
 
 
