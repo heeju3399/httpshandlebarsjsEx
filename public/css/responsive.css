@@ -208,17 +208,6 @@ hr {
 
 /* 2차원 플렉스  */
 
-:root {
-    --main-bg-color: brown;
-    --mobile-column-width: 100px;
-    --mobile-row-width: 100px;
-    --table-row-width: 100px;
-    --table-row-width: 100px;
-    --desktop-row-width: 100px;
-    --desktop-row-width: 100px;
-}
-
-
 @media screen and (max-width: 700px) {
 
     /*스마트폰 UI*/
@@ -409,15 +398,84 @@ hr {
 
 
 /* ////// 2차원 그리드로 페이지 만들기 ////////// */
+
 @media screen and (max-width: 1100px) {
 
     /*스마트폰 UI*/
-    .doulbe_flex_container_desktop_desktop2 {
-        display: none;
+
+
+    /*
+ <div class="doulbe_flex_container_all_ui">
+        <div class="doulbe_flex_container_mobile_ui">
+            <div class="doulbe_flex_container_mobile_ui_column">
+                <div class="doulbe_flex_container_mobile_ui_top_row">
+                    <div class="doulbe_flex_container_mobile_ui_top_row_button">
+
+*/
+
+    .doulbe_flex_container_all_ui {
+        background-color: #ef9a9a;
+        height: 500px;
+        border: 1px solid black;
     }
 
-    .doulbe_flex_container_desktop_mobile2 {
+    /* .doulbe_flex_container_mobile_ui {} */
+
+    .doulbe_flex_container_mobile_ui_column {
         display: flex;
+        flex-direction: column;
+        justify-items: end;
+    }
+
+    .doulbe_flex_container_mobile_ui_top_row {
+        display: flex;
+        flex-direction: row;
+        justify-items: end;
+
+        height: 40px;
+        justify-content: stretch;
+    }
+
+    .doulbe_flex_container_mobile_ui_top_row_button {
+        background-color: wheat;
+        width: 50px;
+        height: 40px;
+    }
+
+    /*  drop down !*/
+    #sidebar {
+        width: 0px;
+        height: 0px;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .sidebar_container {
+        display: none;
+        width: 100;
+        height: 100;
+        background-color: rebeccapurple;
+    }
+
+    .sidebar {}
+
+
+    #sidebar:checked~.sidebar {}
+
+    /*  drop down !*/
+
+    .doulbe_flex_container_mobile_ui_top_row_title {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+        background-color: blue;
+        color: white;
+        align-items: center;
+        font-size: 20px;
+    }
+
+    .doulbe_flex_container_desktop_ui {
+        display: none;
     }
 
 
@@ -427,11 +485,19 @@ hr {
 @media screen and (min-width: 1100px) {
 
     /*PC UI*/
-    .doulbe_flex_container_desktop_mobile2 {
+    .doulbe_flex_container_all_ui {
+        display: block;
+
+        width: 100%;
+        height: 500px;
+        border: 1px solid black;
+    }
+
+    .doulbe_flex_container_mobile_ui {
         display: none;
     }
 
-    .doulbe_flex_container_desktop_desktop2 {
+    .doulbe_flex_container_desktop_ui {
         display: flex;
     }
 }

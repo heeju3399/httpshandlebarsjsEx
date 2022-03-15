@@ -18,6 +18,7 @@ app.engine("hbs", hbs({
 app.set("view engine", "hbs");
 
 app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/imges'));
 
 app.get("/main", (req, res) => {
     console.log('pass');
