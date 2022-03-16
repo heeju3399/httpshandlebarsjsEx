@@ -137,45 +137,66 @@
     <hr><br>
     <h2 id="sizeText3"> 현 사이즈 </h2>
     <div class="doulbe_flex_container_all_ui">
-        <div class="doulbe_flex_container_mobile_ui">
-            <div class="doulbe_flex_container_mobile_ui_column">
-                <div class="doulbe_flex_container_mobile_ui_top_row">
-                    <div class="doulbe_flex_container_mobile_ui_top_row_button">
-                        <input id="sidebar" type="checkbox" />
-                        <div class="sidebar">
-                            <label class="on-off" for="sidebar">Xxxx</label>
-                            <ul>
-                                <li>ss</li>
-                                <li>ss</li>
-                                <li>ss</li>
-                                <li>ss</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="doulbe_flex_container_mobile_ui_top_row_title">
-                        타이틀
+        <!-- mobile ui -->
+        <div class="doulbe_flex_container_mobile_ui_column">
+            <div class="doulbe_flex_container_mobile_ui_top_row">
+                <div class="doulbe_flex_container_mobile_ui_top_row_button">
+                    <input type="checkbox" id="btn_control" />
+                    <label for="btn_control" class="btn_control_label">
+                        <img width="50px;" height="40px;" src="icon/menu.png" id="btnLeft" />
+                    </label>
+                    <div class="doulbe_flex_container_mobile_ui_left_content">
+                        <ul class="left_content_ul">
+                            <li class="left_content_li">content1</li>
+                            <hr class="content_hr">
+                            <li class="left_content_li">content2</li>
+                            <hr class="content_hr">
+                            <li class="left_content_li">content3</li>
+                            <hr class="content_hr">
+                            <li class="left_content_li">content4</li>
+                            <hr class="content_hr">
+                            <li class="left_content_li">content5</li>
+                            <hr class="content_hr">
+                        </ul>
                     </div>
                 </div>
-                <div class="doulbe_flex_container_mobile_ui_middle_row">
-                    <div class="doulbe_flex_container_mobile_ui_middle_row_content1">content1</div>
-                    <div class="doulbe_flex_container_mobile_ui_middle_row_content2">content2</div>
-                    <div class="doulbe_flex_container_mobile_ui_middle_row_content3">content3</div>
-                    <div class="doulbe_flex_container_mobile_ui_middle_row_content4">content4</div>
-                    <div class="doulbe_flex_container_mobile_ui_middle_row_content5">content5</div>
+                <div class="doulbe_flex_container_mobile_ui_top_row_title">
+                    타이틀
                 </div>
             </div>
+            <div class="doulbe_flex_container_mobile_ui_middle_row">
+                <div class="doulbe_flex_container_mobile_ui_middle_row_content1">content1</div>
+                <div class="doulbe_flex_container_mobile_ui_middle_row_content2">content2</div>
+                <div class="doulbe_flex_container_mobile_ui_middle_row_content3">content3</div>
+                <div class="doulbe_flex_container_mobile_ui_middle_row_content4">content4</div>
+                <div class="doulbe_flex_container_mobile_ui_middle_row_content5">content5</div>
+            </div>
         </div>
+        <!-- desktop ui -->
+        <div class="doulbe_flex_container_desktop_ui_main_row">
+            <div class="doulbe_flex_container_desktop_ui_main_row_menubar_column">
+                <ul class="doulbe_flex_container_desktop_ui_main_row_menubar_top">
+                    <li>content1</li>
+                    <li>content2</li>
+                    <li>content3</li>
+                    <li>content4</li>
+                    <li>content5</li>
+                </ul>
+                <hr class="content_hr">
+                <div class="doulbe_flex_container_desktop_ui_main_row_menubar_bottom">
+                    <div class="doulbe_flex_container_desktop_ui_main_row_menubar_bottom_btn">button1</div>
+                    <span>content7</span>
+                    <span>content8</span>
+                </div>
 
-
+            </div>
+            <div class="doulbe_flex_container_desktop_ui_main_row_image"></div>
+        </div>
     </div>
-    {{!-- <div class="doulbe_flex_container_desktop_desktop2">
-        <div class="doulbe_flex_container_desktop_desktop2_column2">
-            <div class="doulbe_flex_container_desktop_desktop2_row3">row3</div>
-            <div class="doulbe_flex_container_desktop_desktop2_row4">row4</div>
-        </div>
-    </div> --}}
 
-    <div style="margin: 100px">marrgin</div>
+    <div style="margin: 100px">
+        -- 여백 --
+    </div>
 
 
 
@@ -184,6 +205,7 @@
     <script>
         var sizeText = document.getElementById("sizeText");
         var sizeText2 = document.getElementById("sizeText2");
+        var sizeText3 = document.getElementById("sizeText3");
         window.onresize = function (event) {
             //alert('event');
             var innerWidth = window.innerWidth;
@@ -197,6 +219,7 @@
             }
             sizeText.textContent = widthText;
             sizeText2.textContent = widthText;
+            sizeText3.textContent = widthText;
         }
 
     </script>
