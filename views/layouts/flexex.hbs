@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/{{style}}">
+    <title>플렉스 연습</title>
+</head>
+
+<body>
+
+    <h2 id="sizeText">현 사이즈</h2>
+
+    <h2>미디어 쿼리와 플렉스 이용 반응형 만들기</h2>
+    <div class="flexbox03">
+        <div class="item03">content1</div>
+        <div class="item03">content2</div>
+        <div class="item03">content3</div>
+        <div class="item03">content4</div>
+    </div>
+    <br>
+    <br>
+    <span>flex-basis: 100%; 아이템이 4개면 하나가 한 행을 다 차지함 나머지는 다음 행으로 </span> <br>
+    <span>flex-basis: 25%; 아이템이 4개면 아이템 4개가 하나의 행안에 같은 크기로 다들어감 </span> <br>
+    <span>flex-basis:30%; 아이템이 4개면 아아템 3개는 하나의 행에 나머지 한개는 다음 행으로 내려옴 </span>
+    <br>
+    <hr><br>
+
+    <h2>고정 너비 아이템 안에 내용있는 레이아웃</h2>
+    <div class="layout02">
+        <aside>
+            사이드바
+        </aside>
+        <article>
+            <h3>타이틀</h3>
+            <div class="flexbox02">
+                <div class="item02">content1</div>
+                <div class="item02" id="selectContent1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit
+                    magnam totam Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores recusandae voluptatem
+                    consectetur temporibus quibusdam corporis enim. Libero dolore inventore provident minima.
+                    voluptatibus delectus fuga sapiente, esse, quis nobis.</div>
+                <div class="item02">content3</div>
+                <div class="item02">content4</div>
+            </div>
+        </article>
+
+    </div>
+    <br>
+    <br>
+    <span>flex-basis: auto; 속성을 부여하면 내용에따라 자동으로 크기 조절됨</span>
+    <br>
+    <hr><br>
+
+    <h2>고정 너비 아이템이 있는 레이아웃</h2>
+    <div class="layout">
+        <aside>
+            사이드바
+        </aside>
+        <article>
+            <h3>타이틀</h3>
+            <div class="flexbox01">
+                <div class="item01">content1</div>
+                <div class="item01">content2</div>
+                <div class="item01">content3</div>
+                <div class="item01">content4</div>
+            </div>
+        </article>
+
+    </div>
+    <br>
+    <br>
+    <span>사이드바 고정 flex-shrink: 0 </span>
+    <br>
+    <span>타이틀 열 변동 flex-shrink: 1 </span>
+    <br>
+    <hr><br>
+
+    <h2>기본구조</h2>
+    <section class="content">
+        <div class="flexbox">
+            <div class="item">content1</div>
+            <div class="item">content2</div>
+            <div class="item">content3</div>
+            <div class="item">content4</div>
+        </div>
+    </section>
+
+
+</body>
+<script>
+    var sizeText = document.getElementById("sizeText");
+    //var sizeText2 = document.getElementById("sizeText2");
+    //var sizeText3 = document.getElementById("sizeText3");
+    window.onresize = function (event) {
+        //alert('event');
+        var innerWidth = window.innerWidth;
+        var widthText = "";
+        if (innerWidth < 700) {
+            widthText = "현 사이즈 : --" + innerWidth + "--  (모바일)  ";
+        } else if (innerWidth >= 700 && innerWidth < 1100) {
+            widthText = "현 사이즈 : --" + innerWidth + "--   (테블릿)";
+        } else {
+            widthText = "현 사이즈 : --" + innerWidth + "--   (pc) ";
+        }
+        sizeText.textContent = widthText;
+        //sizeText2.textContent = widthText;
+        //sizeText3.textContent = widthText;
+    }
+
+</script>
+
+</html>

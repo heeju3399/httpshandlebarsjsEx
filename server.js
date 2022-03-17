@@ -14,45 +14,74 @@ app.engine("hbs", hbs({
     //         return arg1 === arg2 ? options.fn() : options.inverse();
     //     },
     // },
-}));
+}
+
+));
 app.set("view engine", "hbs");
 
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/imges'));
 
 app.get("/main", (req, res) => {
-    console.log('pass');
+    console.log('main pass');
     res.status(200).render("empty.hbs", {
         style: "main.css",
-    });
-});
+    }
+    );
+}
+);
+
+app.get("/flexex", (req, res) => {
+    console.log('flexex pass');
+    res.status(200).render("empty.hbs", {
+        layout: 'flexex',
+        style: "flexex.css",
+    }
+    );
+}
+);
 
 app.get("/responsive", (req, res) => {
     console.log('test pass');
+
     res.status(200).render("empty.hbs", {
         layout: 'responsive',
         style: "responsive.css",
-    });
-});
+    }
+
+    );
+}
+
+);
 
 app.get("/structure", (req, res) => {
     console.log('structure pass');
+
     res.status(200).render("empty.hbs", {
         layout: 'structure',
         style: "structure.css",
-    });
-});
+    }
 
-app.get("/css", (req, res) => {
+    );
+}
+
+);
+
+app.get("/mycss", (req, res) => {
     console.log('css pass');
+
     res.status(200).render("empty.hbs", {
-        layout: 'css',
-        style: "css.css",
-    });
-});
+        layout: 'mycss',
+        style: "mycss.css",
+    }
+    );
+}
+
+);
 
 app.get("/handlebar", (req, res) => {
     console.log('handlebar pass');
+
     res.status(200).render("empty.hbs", {
         layout: 'handlebar',
         style: "handlebar.css",
@@ -61,9 +90,15 @@ app.get("/handlebar", (req, res) => {
         // isLoggedIn: false,
         // isReady: false,
         // users: ["parkoon", "kimyang", "choikoon", "leeyang"],
-    });
-});
+    }
+
+    );
+}
+
+);
 
 app.listen(3000, () => {
     console.log("3000");
-});
+}
+
+);
