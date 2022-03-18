@@ -10,7 +10,59 @@
 </head>
 
 <body>
-    <h1>css</h1>
+
+    <h3>셀렉터</h3>
+    <span>자식 셀렉터</span>
+    <div class="child">div > <strong>strong</strong></div>
+    <span>div > strong{}</span>
+    <br>
+    <hr>
+    <span>자손 셀렉터</span>
+    <div>div > <span>span > <strong>strong</strong></span></div>
+    <span>div strong{}</span>
+    <br>
+    <hr>
+    <span>전체 셀렉터</span><br>
+    <span>div > ul > li > strong / i</span><br>
+    <span>ul * {color : orange}</span>
+    <div>
+        <ul>
+            <li>li 1 </li>
+            <li>li 2 ><strong> strong</strong></li>
+            <li>li 3<i> iiii </i></li>
+            <li>li 4<strong>strong</strong></li>
+        </ul>
+    </div>
+    <hr>
+    <span>속성 셀렉터</span>
+    <br>
+    <span>input[type = text]{color:red}</span><br>
+    <input type="text">
+    <br>
+    <hr>
+    <span>가상 클래스 셀렉터</span>
+    <br>
+    <div class="maintitle">MAIN - TITLE</div>
+    <span>:first-latter{color:red}</span>
+    <div class="pseudo">
+        <ul>
+            <li>li 1 </li>
+            <li>li 2 ><strong> strong</strong></li>
+            <li>li 3<i> iiii </i></li>
+            <li>li 4<strong>strong</strong></li>
+        </ul>
+    </div>
+    <span>:hover { background-color: #5B6DCD; }</span>
+    <br>
+    <hr>
+
+    <h3>텍스트</h3>
+    <br>
+
+    <span>=============</span>
+    <br>
+
+    <hr>
     <h3>border sizing</h3>
     <div class="border_sizing_container">
         <div class="border_sizing_container_nomal">nomal</div>

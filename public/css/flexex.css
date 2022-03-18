@@ -6,6 +6,32 @@ span {
     font-size: 1rem;
 }
 
+
+
+/*
+    미디어 쿼리 없이 반응형 만들기
+*/
+
+.flexbox04 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    border: 1px solid black;
+    margin: 10px;
+    text-align: center;
+
+}
+
+.item04 {
+    flex-basis: calc(calc(768px - 100%) * 100);
+    min-height: 8rem;
+    flex-shrink: 1;
+    flex-grow: 1;
+    background-color: #ffe0e0;
+    border: 1px solid black;
+}
+
+
 /*
     미디어 쿼리 사용 반응형 만들기
 */

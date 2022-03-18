@@ -1,5 +1,48 @@
 body {
-    font-size: 2rem;
+    font-size: 1rem;
+}
+
+/*
+    자식 셀렉터
+*/
+
+.child>strong {
+    color: blue;
+}
+
+/*
+    자손 셀렉터
+*/
+
+div strong {
+    color: red;
+}
+
+/*
+    전체 셀렉터
+*/
+ul * {
+    color: orange;
+}
+
+/*
+    속성 셀렉터
+*/
+
+input[type=text] {
+    color: red;
+}
+
+/*
+    가상 셀렉터
+*/
+
+.maintitle:first-letter {
+    color: red;
+}
+
+.pseudo li:hover {
+    background-color: #5B6DCD;
 }
 
 .border_sizing_container {
