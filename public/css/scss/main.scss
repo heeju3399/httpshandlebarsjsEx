@@ -1,24 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+h1 {
+    background-color: blue;
+    color: white;
+    text-align: center;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/{{style}}">
-    <title>Sass</title>
-</head>
+pre {}
 
-<body>
-    <h1>SCSS // SASS</h1>
-    <h3>중첩문</h3>
-    <div id="topMainDiv">1 >
-        <div>2 >
-            <div>3 > <span>span!</span></div>
-        </div>
-    </div>
-    <br>
-    <pre>
+/*
+    중첩문
+*/
 #topMainDiv {
     background-color: yellow;
 
@@ -35,13 +25,7 @@
         }
     }
 }
-    </pre>
-    <br>
-    <hr>
-    <br>
-    <p class="fontStyle_compressAttribute">텍스트를 위한 스타일! 단축 속성 !</p>
-    <br>
-    <pre>
+
 .fontStyle_compressAttribute {
     font: {
         size: 33px;
@@ -57,19 +41,9 @@
     font-weight: 900;
     */
 }
-    </pre>
-
-    <br>
-    <hr>
-    <h3>가상선택자</h3>
-    <br>
-    <button class="first-btn">가상선택자 1 !</button>
-    <button class="second-btn">가상선택자 2 !</button>
-    <div></div>
-    <br>
-    <pre>
 
 .first-btn {
+    // 참조문 상위 중첩 선택문 !!
     width: 200px;
 
     &:hover {
@@ -81,20 +55,10 @@
     width: 200px;
     background-color: indianred;
 }
-    </pre>
-    <br>
-    <hr>
-    <h3>변수 사용법!</h3>
-    <br>
-    <span class="span-color2">$span-color:yellow</span><br><br>
-    <div>
-        <button class="btn">button 1</button>
-        <button class="btn">button 2</button>
-        <button class="btn">button 3</button>
-    </div>
-    <br>
-    <span>
-        <pre>
+
+/*
+    변수사용
+*/
 $span-color2:orange;
 $btn-color: indigo;
 $font-color:white;
@@ -123,18 +87,10 @@ $btn-width:100px;
         width: $btn-width+200px;
     }
 }
-        </pre>
-    </span>
-    <br>
-    <hr>
-    <h3>믹스인(함수) 사용법!</h3>
-    <br>
-    <div class="mixinMain">
-        <div class="firstBox">1</div>
-        <div class="secondBox">2</div>
-    </div>
-    <br>
-    <pre>
+
+/*
+    mix in
+*/
 $bg-color2:orange;
 $font-color2:black;
 
@@ -171,8 +127,3 @@ $font-color2:black;
 .secondBox {
     @include box-style(yellow);
 }
-    </pre>
-
-</body>
-
-</html>

@@ -93,7 +93,7 @@ app.get("/myscss", (req, res) => {
 
     res.status(200).render("empty.hbs", {
         layout: 'myscss',
-        style: "myscss.css",
+        style: "scss/myscss.css",
     }
     );
 }
@@ -117,7 +117,7 @@ app.get("/handlebar", (req, res) => {
 
 );
 
-app.listen(3000, () => {
+app.listen(3030, () => {
     console.log("3030");
 }
 
