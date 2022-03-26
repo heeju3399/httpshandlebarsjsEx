@@ -1,8 +1,8 @@
-const express = require('express');
-const hbs = require('express-handlebars');
+var express = require('express');
+var hbs = require('express-handlebars');
 const app = express();
 
-app.engine("hbs", hbs({
+app.engine("hbs", hbs.engine({
     extname: "hbs",
     defaultLayout: "main",
     layoutsDir: __dirname + "/views/layouts",
@@ -15,7 +15,6 @@ app.engine("hbs", hbs({
     //     },
     // },
 }
-
 ));
 app.set("view engine", "hbs");
 
@@ -76,7 +75,28 @@ app.get("/mycss", (req, res) => {
     }
     );
 }
+);
 
+app.get("/myreact", (req, res) => {
+    console.log('myreact pass');
+
+    res.status(200).render("empty.hbs", {
+        layout: 'myreact',
+        style: "myreact.css",
+    }
+    );
+}
+);
+
+app.get("/myscss", (req, res) => {
+    console.log('css pass');
+
+    res.status(200).render("empty.hbs", {
+        layout: 'myscss',
+        style: "myscss.css",
+    }
+    );
+}
 );
 
 app.get("/handlebar", (req, res) => {
@@ -98,7 +118,7 @@ app.get("/handlebar", (req, res) => {
 );
 
 app.listen(3000, () => {
-    console.log("3000");
+    console.log("3030");
 }
 
 );
