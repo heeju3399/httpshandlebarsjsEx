@@ -21,16 +21,16 @@ app.set("view engine", "hbs");
 
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/imges'));
-app.use(express.static(__dirname + '/build'));
 
-app.get("/main", (req, res) => {
-    console.log('main pass');
-    res.status(200).render("empty.hbs", {
-        style: "main.css",
-    }
-    );
-}
-);
+
+// app.get("/main", (req, res) => {
+//     console.log('main pass');
+//     res.status(200).render("empty.hbs", {
+//         style: "main.css",
+//     }
+//     );
+// }
+// );
 
 app.get("/flexex", (req, res) => {
     console.log('flexex pass');
@@ -67,7 +67,6 @@ app.get("/structure", (req, res) => {
 
 app.get("/", (req, res) => {
     console.log('main pass');
-
     res.status(200).render("empty.hbs", {
         layout: 'main',
         style: "main.css",
@@ -75,6 +74,8 @@ app.get("/", (req, res) => {
     );
 }
 );
+
+
 
 app.get("/mycss", (req, res) => {
     console.log('css pass');
@@ -88,7 +89,11 @@ app.get("/mycss", (req, res) => {
 );
 
 app.get('/myreact', function (req, res) {
+    // 여기에 있어야함... app.get 위에 있으면 리엑트가 먼저 실행됨,,
+    console.log('myreact pass');
+    app.use(express.static(__dirname + '/build'));
     res.sendFile(path.join(__dirname, 'build', '/index.html'));
+    //res.sendFile("E:/sss_project/연습용/httpshandlebarsjsEx/build/index.html");
 });
 
 // app.get("/myreact", (req, res) => {

@@ -1,0 +1,73 @@
+body {
+  padding: 10px;
+}
+
+header {
+  text-align: center;
+  border: 1px solid black;
+  background-color: black;
+  border-radius: 20px;
+}
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ol {
+  padding-left: 0px;
+}
+nav ol li {
+  list-style: none;
+  background-color: brown;
+  margin: 5px;
+  border-radius: 10px;
+}
+nav ol li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  color: white;
+  text-decoration: none;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+article form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+article form input {
+  width: 90%;
+}
+article form textarea {
+  width: 90%;
+}
+article form P input {
+  width: 100px;
+}
+
+ul li {
+  margin: 5px;
+  background-color: red;
+}
+ul li div {
+  color: white;
+  background-color: teal;
+}
+ul li div:hover {
+  cursor: pointer;
+}
+
+footer {
+  margin: 100px;
+}
+
+/*# sourceMappingURL=App.css.map */
