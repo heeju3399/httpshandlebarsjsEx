@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/{{style}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <title>main</title>
+    <script src="https://kit.fontawesome.com/4a454f59b4.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <i class="fa-solid fa-candy-cane"></i>
+            <a href="#">WebPage_Example</a>
+        </div>
+        <ul class="navbar__menu">
+            <li><a href="responsive">반응형연습</a></li>
+            <li><a href="flexex">flex 연습</a></li>
+            <li><a href="myreact">react 연습</a></li>
+            <li><a href="myscss">scss 연습</a></li>
+            <li><a href="structure">문서구조연습</a></li>
+            <li><a href="mycss">css 연습</a></li>
+            <li><a href="handlebar">핸들바연습</a></li>
+        </ul>
+        <ul class="navbar__icons">
+            <li><i class="fa-brands fa-twitter"></i></li>
+            <li><i class="fa-brands fa-facebook"></i></li>
+            <li><i class="fa-brands fa-instagram"></i></li>
+        </ul>
+        <a href=" #" class="navbar__toggle">
+            <i class="fas fa-bars"></i>
+        </a>
+    </nav>
+    <script>
+        const toggleBtn = document.querySelector('.navbar__toggle');
+        const menu = document.querySelector('.navbar__menu');
+        const icons = document.querySelector('.navbar__icons');
+        toggleBtn.addEventListener('click', () => {
+            menu.classList.toggle('active');
+            icons.classList.toggle('active');
+        });
+    </script>
+</body>
+
+
+</html>

@@ -1,0 +1,129 @@
+h1 {
+    background-color: blue;
+    color: white;
+    text-align: center;
+}
+
+pre {}
+
+/*
+    중첩문
+*/
+#topMainDiv {
+    background-color: yellow;
+
+    div {
+        background-color: aquamarine;
+
+        div {
+            background-color: blueviolet;
+
+            span {
+                background-color: antiquewhite;
+                color: wheat;
+            }
+        }
+    }
+}
+
+.fontStyle_compressAttribute {
+    font: {
+        size: 33px;
+        style: italic;
+        weight: 900;
+    }
+
+    /*
+    이렇게 해야하는것을 위에처럼 단축해서 할수있음 
+    하지만 자동완성이 안된다는 단점이 있음 
+    font-size: 33px;
+    font-style: italic;
+    font-weight: 900;
+    */
+}
+
+.first-btn {
+    // 참조문 상위 중첩 선택문 !!
+    width: 200px;
+
+    &:hover {
+        background-color: rebeccapurple;
+    }
+}
+
+.second-btn:hover {
+    width: 200px;
+    background-color: indianred;
+}
+
+/*
+    변수사용
+*/
+$span-color2:orange;
+$btn-color: indigo;
+$font-color:white;
+$btn-width:100px;
+
+.span-color2 {
+    color: $span-color2;
+}
+
+.btn {
+    &:nth-child(1) {
+        color: $font-color;
+        background-color: $btn-color;
+        width: $btn-width;
+    }
+
+    &:nth-child(2) {
+        color: $font-color;
+        background-color: $btn-color;
+        width: $btn-width+100px;
+    }
+
+    &:nth-child(3) {
+        color: $font-color;
+        background-color: $btn-color;
+        width: $btn-width+200px;
+    }
+}
+
+/*
+    mix in
+*/
+$bg-color2:orange;
+$font-color2:black;
+
+.mixinMain {
+    display: flex;
+    flex-direction: row;
+
+}
+
+@mixin my-font {
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-style: italic;
+}
+
+@mixin box-style($bg-color:$bg-color2, $font-color:$font-color2) {
+
+    width: 7rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bg-color;
+    border: 1px solid black;
+    color: $font-color;
+
+    @include my-font();
+}
+
+.firstBox {
+    @include box-style(red, yellow);
+}
+
+.secondBox {
+    @include box-style(yellow);
+}

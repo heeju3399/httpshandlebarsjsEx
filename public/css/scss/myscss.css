@@ -1,0 +1,109 @@
+@charset "UTF-8";
+h1 {
+  background-color: blue;
+  color: white;
+  text-align: center;
+}
+
+/*
+    중첩문
+*/
+#topMainDiv {
+  background-color: yellow;
+}
+#topMainDiv div {
+  background-color: aquamarine;
+}
+#topMainDiv div div {
+  background-color: blueviolet;
+}
+#topMainDiv div div span {
+  background-color: antiquewhite;
+  color: wheat;
+}
+
+.fontStyle_compressAttribute {
+  font-size: 33px;
+  font-style: italic;
+  font-weight: 900;
+  /*
+  이렇게 해야하는것을 위에처럼 단축해서 할수있음 
+  하지만 자동완성이 안된다는 단점이 있음 
+  font-size: 33px;
+  font-style: italic;
+  font-weight: 900;
+  */
+}
+
+.first-btn {
+  width: 200px;
+}
+.first-btn:hover {
+  background-color: rebeccapurple;
+}
+
+.second-btn:hover {
+  width: 200px;
+  background-color: indianred;
+}
+
+/*
+    변수사용
+*/
+.span-color2 {
+  color: orange;
+}
+
+.btn:nth-child(1) {
+  color: white;
+  background-color: indigo;
+  width: 100px;
+}
+.btn:nth-child(2) {
+  color: white;
+  background-color: indigo;
+  width: 200px;
+}
+.btn:nth-child(3) {
+  color: white;
+  background-color: indigo;
+  width: 300px;
+}
+
+/*
+    mix in
+*/
+.mixinMain {
+  display: flex;
+  flex-direction: row;
+}
+
+.firstBox {
+  width: 7rem;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  border: 1px solid black;
+  color: yellow;
+  font-size: 1.5rem;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.secondBox {
+  width: 7rem;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+  border: 1px solid black;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 800;
+  font-style: italic;
+}
+
+/*# sourceMappingURL=main.css.map */

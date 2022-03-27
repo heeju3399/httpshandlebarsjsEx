@@ -1,0 +1,24 @@
+{
+  "name": "httpshandlebarsjsex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heeju3399/httpshandlebarsjsEx.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heeju3399/httpshandlebarsjsEx/issues"
+  },
+  "homepage": "https://github.com/heeju3399/httpshandlebarsjsEx#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.3",
+    "path": "^0.12.7"
+  }
+}

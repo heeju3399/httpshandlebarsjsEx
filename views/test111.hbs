@@ -1,0 +1,31 @@
+<h1>?????????????????????</h1>
+<h2>Name : {{name}}</h2>
+
+{{#if isLoggedIn}}
+<a href="#">Logout</a>
+{{else}}
+<a href="#">Login</a>
+{{/if}}
+
+{{#if isReady}}
+{{else}} <button>Start</button>
+{{/if}}
+
+{{#each users}}
+<span>{{this}}</span>
+{{/each}}
+
+{{#each user as |value key|}}
+<span>{{value}}</span>
+<span>{key}}</span>
+{{/each}}
+
+
+{{#ifUsernameParkoon username "parkoon"}}
+<h1>Hello, parkoon</h1>
+{{/ifUsernameParkoon}}
+<h1>nononoononono, parkoon</h1>
+
+
+
+{{!-- {{< header title="This is title" }} . . . {{< footer}} --}}

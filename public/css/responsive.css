@@ -1,0 +1,608 @@
+body {
+    margin: 0px;
+    padding-left: 5%;
+    padding-right: 5%;
+
+}
+
+h1,
+p {
+    margin: 0;
+}
+
+hr {
+    margin: 30px;
+}
+
+.content_hr {
+    margin: 0rem;
+    padding: 0rem;
+}
+
+/* ////// grid ////////// */
+@media screen and (max-width: 700px) {
+
+    /*스마트폰 UI*/
+    .container {
+        background-color: bisque;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+
+    .item {
+        margin: 5px;
+        background-color: yellow;
+        padding: 10px;
+    }
+
+
+}
+
+@media screen and (min-width: 700px) and (max-width: 1100px) {
+
+    /*tablet UI*/
+    .container {
+        background-color: bisque;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+
+    .item {
+        margin: 5px;
+        background-color: red;
+        padding: 10px;
+    }
+
+}
+
+@media screen and (min-width: 1100px) {
+
+    /*PC UI*/
+    .container {
+        background-color: bisque;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+    }
+
+    .item {
+        margin: 5px;
+        background-color: green;
+        padding: 10px;
+    }
+}
+
+/* ////// grid ////////// */
+
+.container22 {
+    display: grid;
+
+}
+
+.item2 {
+    text-align: center;
+    padding: 10px;
+    font-size: 50px;
+
+}
+
+.color-1 {
+    grid-column: 1 /5;
+    background-color: olive;
+    border: 1px;
+    color: aqua;
+}
+
+.color-2 {
+    grid-row: 3 / 4;
+    background-color: red;
+}
+
+.color-3 {
+    grid-column: 3;
+    grid-row: 3;
+    background-color: orange;
+}
+
+.color-4 {
+    grid-column: 2/3;
+    background-color: teal;
+}
+
+.color-5 {
+    grid-column: 1 / 5;
+    background-color: green;
+}
+
+@media only screen and (max-width: 1000px) {
+    .container22 {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .color-2 {
+        grid-column: 1 / 3;
+        grid-row: 4 / 5;
+    }
+
+    .color-3 {
+        grid-column: 1/3;
+        grid-row: 3;
+    }
+
+    .color-4 {
+        grid-column: 1;
+    }
+
+    .color-5 {
+        grid-column: 2;
+    }
+}
+
+/* 1차원 flex box  */
+
+.flex_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+    align-content: space-around;
+    background-color: beige;
+    height: 300px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.itemf3 {
+    width: 80px;
+    height: 80px;
+    border: 1px solid black;
+}
+
+.itemFlex1 {
+    background-color: #ef9a9a;
+    align-self: center;
+}
+
+.itemFlex2 {
+    background-color: red;
+}
+
+.itemFlex3 {
+    background-color: yellow;
+}
+
+.itemFlex4 {
+    background-color: teal;
+}
+
+.itemFlex5 {
+    background-color: tan;
+}
+
+.itemFlex6 {
+    background-color: thistle;
+}
+
+.itemFlex7 {
+    background-color: palegoldenrod;
+}
+
+.itemFlex8 {
+    background-color: peru;
+}
+
+.itemFlex9 {
+    background-color: purple;
+}
+
+.itemFlex10 {
+    background-color: olivedrab;
+}
+
+.itemFlex11 {
+    background-color: violet;
+}
+
+.itemFlex12 {
+    background-color: silver;
+
+}
+
+/* 2차원 플렉스  */
+
+@media screen and (max-width: 700px) {
+
+    /*스마트폰 UI*/
+    .doulbe_flex_container_tablet {
+        display: none;
+    }
+
+    .doulbe_flex_container_desktop {
+        display: none;
+    }
+
+    .doulbe_flex_container_mobile {
+        display: flex;
+        background-color: #ef9a9a;
+        border: 1px solid black;
+        height: 500px;
+    }
+
+    .doulbe_flex_container_mobile_column {
+        background-color: aqua;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-shrink: 0;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    .doulbe_flex_container_mobile_row {
+        display: flex;
+        background-color: green;
+        margin: 10px;
+        height: 100%;
+        border: 2px solid black;
+        color: wheat;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+}
+
+@media screen and (min-width: 700px) and (max-width: 1100px) {
+
+    /*tablet UI*/
+    .doulbe_flex_container_mobile {
+        display: none;
+    }
+
+    .doulbe_flex_container_desktop {
+        display: none;
+    }
+
+    .doulbe_flex_container_tablet {
+        display: flex;
+        background-color: #ef9a9a;
+        border: 1px solid black;
+        height: 500px;
+    }
+
+    .doulbe_flex_container_tablet_column1 {
+        background-color: aqua;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        flex-wrap: nowrap;
+        width: 50%;
+    }
+
+    .doulbe_flex_container_tablet_column2 {
+        background-color: yellow;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        flex-wrap: nowrap;
+        width: 50%;
+    }
+
+    .doulbe_flex_container_tablet_row {
+        display: flex;
+        background-color: orange;
+        margin: 10px;
+        border: 2px solid orange;
+        color: blueviolet;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .doulbe_flex_container_tablet_row1 {
+        margin: 10px;
+        height: 100%;
+        background-color: greenyellow;
+        border: 1px solid black;
+    }
+
+    .doulbe_flex_container_tablet_row2 {
+        margin: 10px;
+        height: 100%;
+        background-color: blue;
+        border: 1px solid black;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+
+    /*PC UI*/
+    .doulbe_flex_container_mobile {
+        display: none;
+    }
+
+    .doulbe_flex_container_tablet {
+        display: none;
+    }
+
+    .doulbe_flex_container_desktop {
+        display: flex;
+        background-color: #ef9a9a;
+        border: 1px solid black;
+        height: 500px;
+    }
+
+    .doulbe_flex_container_desktop_column1 {
+        background-color: orange;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        flex-wrap: nowrap;
+        width: 25%;
+    }
+
+    .doulbe_flex_container_desktop_column2 {
+        background-color: purple;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        flex-wrap: nowrap;
+        width: 25%;
+    }
+
+    .doulbe_flex_container_desktop_column3 {
+        background-color: indianred;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        flex-wrap: nowrap;
+        width: 25%;
+    }
+
+    .doulbe_flex_container_desktop_column4 {
+        background-color: indigo;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        flex-wrap: nowrap;
+        width: 25%;
+    }
+
+    .doulbe_flex_container_desktop_row1 {
+        margin: 10px;
+        height: 100%;
+        background-color: blue;
+        border: 1px solid black;
+    }
+
+    .doulbe_flex_container_desktop_row2 {
+        margin: 10px;
+        height: 100%;
+        background-color: violet;
+        border: 1px solid black;
+
+    }
+
+    .doulbe_flex_container_desktop_row3 {
+        margin: 10px;
+        height: 100%;
+        background-color: rosybrown;
+        border: 1px solid black;
+    }
+
+    .doulbe_flex_container_desktop_row4 {
+        margin: 10px;
+        height: 100%;
+        background-color: yellow;
+        border: 1px solid black;
+    }
+}
+
+
+/* ////// 2차원 그리드로 UI 꾸미기 ////////// */
+
+@media screen and (max-width: 700px) {
+
+    /*스마트폰 UI*/
+    .doulbe_flex_container_desktop_ui_main_row {
+        display: none;
+    }
+
+    .doulbe_flex_container_all_ui {
+        background-color: #ef9a9a;
+        height: 500px;
+        border: 1px solid black;
+    }
+
+    .doulbe_flex_container_mobile_ui_column {
+        display: flex;
+        flex-direction: column;
+        justify-items: end;
+
+    }
+
+    .doulbe_flex_container_mobile_ui_top_row {
+        display: flex;
+        flex-direction: row;
+        justify-items: end;
+        height: 40px;
+        justify-content: stretch;
+
+    }
+
+    .doulbe_flex_container_mobile_ui_top_row_button {
+        background-color: white;
+        width: 50px;
+        height: 40px;
+        border-right: 1px solid black;
+    }
+
+    /*  드랍다운 버튼 영역 !*/
+    #btn_control {
+        display: none;
+    }
+
+    #btn_control:checked~.doulbe_flex_container_mobile_ui_left_content {
+        display: flex;
+    }
+
+    /*  드랍다운 콘텐츠 영역 !*/
+    .btn_control_label {
+        display: block;
+        height: 2.5rem;
+    }
+
+    .doulbe_flex_container_mobile_ui_left_content {
+        display: none;
+        background-color: white;
+        width: 14rem;
+        height: 29rem;
+        position: relative;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+        border-top: 1px solid black;
+        margin: 0rem;
+    }
+
+    .left_content_ul {
+        padding: 1rem;
+    }
+
+    .left_content_li {
+        background-color: white;
+        margin: 1rem;
+        font-size: 1.5rem;
+    }
+
+    #btnLeft {
+        cursor: pointer;
+        padding: 0.5rem;
+        box-sizing: border-box;
+        transition-duration: .3s;
+    }
+
+    /* 메인 타이틀 영역 */
+    .doulbe_flex_container_mobile_ui_top_row_title {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+        background-color: white;
+        color: black;
+        align-items: center;
+        font-size: 20px;
+    }
+
+    /*    메인 창 영역    */
+    .doulbe_flex_container_mobile_ui_middle_row {
+        background-image: url("/7.jpg");
+        height: 480px;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 2rem;
+        text-align: center;
+        color: blue;
+    }
+
+    .doulbe_flex_container_mobile_ui_middle_row_content1 {
+        margin-top: 5rem;
+        flex-grow: 1;
+    }
+
+
+
+    .doulbe_flex_container_mobile_ui_middle_row_content3 {
+        margin-top: 3rem;
+        cursor: pointer;
+        width: 14rem;
+        height: 3rem;
+        background-color: indigo;
+        color: white;
+    }
+
+    .doulbe_flex_container_mobile_ui_middle_row_content4 {
+        flex-grow: 1;
+        color: white;
+    }
+
+    .doulbe_flex_container_mobile_ui_middle_row_content5 {
+        color: white;
+    }
+}
+
+@media screen and (min-width: 700px) {
+
+    /*pc UI*/
+    .doulbe_flex_container_mobile_ui_column {
+        display: none;
+    }
+
+    .doulbe_flex_container_all_ui {
+        display: block;
+        width: 100%;
+        height: 500px;
+        border: 1px solid black;
+
+    }
+
+    .doulbe_flex_container_desktop_ui_main_row {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+    }
+
+    .doulbe_flex_container_desktop_ui_main_row_image {
+        flex-grow: 1;
+        background-image: url("/7.jpg");
+        background-size: cover;
+        background-position: center;
+
+    }
+
+    .doulbe_flex_container_desktop_ui_main_row_menubar_column {
+        display: flex;
+        flex-direction: column;
+        width: 16rem;
+        height: 100%;
+        background-color: white;
+    }
+
+    .doulbe_flex_container_desktop_ui_main_row_menubar_top>li {
+        cursor: pointer;
+        margin: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .doulbe_flex_container_desktop_ui_main_row_menubar_bottom {
+        padding-top: 3rem;
+        background-color: indigo;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        height: 100%;
+        color: white;
+        font-size: 1.3rem;
+    }
+
+    .doulbe_flex_container_desktop_ui_main_row_menubar_bottom_btn {
+        cursor: pointer;
+        width: 80%;
+        height: 2rem;
+        background-color: skyblue;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-radius: 1rem;
+    }
+
+    .doulbe_flex_container_desktop_ui_main_row_menubar_bottom>span {
+        margin-top: .7rem;
+    }
+}
