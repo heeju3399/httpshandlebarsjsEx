@@ -53,5 +53,6 @@
   "bugs": {
     "url": "https://github.com/heeju3399/httpshandlebarsjsEx/issues"
   },
-  "homepage": "https://github.com/heeju3399/httpshandlebarsjsEx#readme"
+  "homepage": "https://github.com/heeju3399/httpshandlebarsjsEx#readme",
+  "devDependencies": {}
 }
